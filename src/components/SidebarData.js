@@ -4,7 +4,7 @@ import * as IoIcons from 'react-icons/io';
 
 export const SidebarData = [
   {
-    title: 'Inicio de Sección',
+    title: 'Iniciar Sesion',
     path: '/login',
     icon: <IoIcons.IoIosCheckmarkCircleOutline />,
     cName: 'nav-text'
