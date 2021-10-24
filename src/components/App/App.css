@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #212121;
+  background-image: url(https://brazilcham.com/wp-content/uploads/2021/04/spotkanie-biznesowe.jpg);
+  background-size: 110rem;
+  background-position: center;
+  color: whitesmoke;
+  flex-direction: column;
+}
+
+.target{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  border: 20px solid #212121;
+  border-radius: 1px;
+  background-color: #212121;
+  color: whitesmoke;
+  flex-direction: column;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+}
+
+.table {
+	height: 50px;
+	width: 50px;
+	margin: 0; padding: 0;
+	border-collapse: collapse;
+}
+.td {
+	border-spacing: 0;
+	height: 20px;
+	width: 120px;
+}
+
+.td1 {
+	border-spacing: 0;
+	height: 20px;
+	width: 220px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.main-header{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.create-form label{
+  color: whitesmoke !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px !important;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.textField{
+  height: 40px;
+    width: 300px;
+    border: 1px solid #e5e5e5;
+    padding: 0 32px 0 16px;
+  }
+    .textField:hover {
+      cursor: pointer;
+    }
+
+    .barraBusqueda{
+      float: right;
+       padding: 20px;
+        }
