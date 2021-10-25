@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Form } from 'semantic-ui-react'
 import { Link, useParams } from 'react-router-dom';
 import { httpGet, httpPatch, httpPost } from '../../../utils/fetch';
+import { getToken } from '../../../utils/getToken';
 
 export default function CreateProduct() {
 
@@ -53,8 +54,11 @@ export default function CreateProduct() {
         console.log(createdproduct);
         }
     }
+
+    const token = getToken();
     return (
         <div>
+        {token ? <>
             <h2 className="main-header"> Productos </h2>
             <h3> Registrar producto </h3>
             <Form className="create-form">
@@ -83,6 +87,7 @@ export default function CreateProduct() {
                     <Button color="red">Cancelar</Button>
                 </Link>
             </Form>
+            </> : window.location.href = '/' }
         </div>
     )
 }

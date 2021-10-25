@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Button, Table } from 'semantic-ui-react'
 import { useEffect } from 'react';
 import { httpDelete, httpGet } from '../../../utils/fetch';
+import { getToken } from '../../../utils/getToken';
+
 export default function ReadProduct() {
 
     const [products, setProducts] = useState([]);
@@ -32,9 +34,10 @@ export default function ReadProduct() {
 
 
 
-
+    const token = getToken();
     return (
         <div>
+        {token ? <>
             <div className= "barraBusqueda">
                 <input type="text"  class="textField" placeholder='Busca el producto' value={filter} onChange={(e) => {
                     setFilter(e.target.value)
@@ -88,6 +91,7 @@ export default function ReadProduct() {
             <Link to='/registrar-producto'>
                 <Button color="green">Registrar Producto</Button>
             </Link>
+        </> : window.location.href = '/' }
         </div>
     )
 }

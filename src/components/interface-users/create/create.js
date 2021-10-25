@@ -25,54 +25,54 @@ export default Create;*/
 
 export default function Create() {
 
-    const [Nombre, setFirstName] = useState('');
-    const [Cedula, setId] = useState('');
-    const [Celular, setCellphone] = useState('');
-    const [Edad, setAge] = useState('');
+    const [Nombre, setName] = useState('');
     const [Email, setEmail] = useState('');
+    const [Password, setPassword] = useState('');
+    const [Role, setRole] = useState('');
+    const [WithGoogle, setWgoogle] = useState('');
 
     const params = useParams();
     const { pathname } = window.location;
-    const isForUpdate = !pathname.includes('registrar-vendedor');
+    const isForUpdate = !pathname.includes('registrar-usuario');
     useEffect(() => {
         if ( !params.id && isForUpdate){
-            window.location.href = '/registrar-vendedor';
+            window.location.href = '/registrar-usuario';
             return;
         }
-        const getVendorData = async () => {
-            const vendorData = await httpGet(`${process.env.REACT_APP_BACKEND_URL}/vendors/${params.id}`);
-            if (vendorData){
-                const vendor = vendorData[0];
-                if (vendor){
-                    setFirstName(vendor.name);
-                    setId(vendor.cedula);
-                    setCellphone(vendor.celular)
-                    setAge(vendor.edad);
-                    setEmail(vendor.email);
+        const getUserData = async () => {
+            const userData = await httpGet(`${process.env.REACT_APP_BACKEND_URL}/users/${params.id}`);
+            if (userData){
+                const user = userData[0];
+                if (user){
+                    setName(user.name);
+                    setEmail(user.email);
+                    setPassword(user.password);
+                    setRole(user.role);
+                    setWgoogle(user.withGoogle);
                 }
             }
         };
-        getVendorData();
+        getUserData();
     },[]);
 
     const postData = async () => {
-        const newVendor ={
+        const newUser ={
         name: Nombre,
-        cedula: Cedula,
-        celular: Celular,
-        edad: Edad,
         email: Email,
+        password: Password,
+        role: Role,
+        withGoogle: WithGoogle,
         };
         if(isForUpdate){
-                const UpdatedVendor = await httpPatch(`${process.env.REACT_APP_BACKEND_URL}/vendors/${params.id}`,{
-                body: JSON.stringify(newVendor),
+                const UpdatedUser = await httpPatch(`${process.env.REACT_APP_BACKEND_URL}/users/${params.id}`,{
+                body: JSON.stringify(newUser),
             });
-            console.log(UpdatedVendor);
+            console.log(UpdatedUser);
         }else{
-            const createdVendor = await httpPost(`${process.env.REACT_APP_BACKEND_URL}/vendors`,{
-            body: JSON.stringify(newVendor),
+            const createdUser = await httpPost(`${process.env.REACT_APP_BACKEND_URL}/users`,{
+            body: JSON.stringify(newUser),
         });
-        console.log(createdVendor);
+        console.log(createdUser);
         }
     }
 
@@ -80,7 +80,7 @@ export default function Create() {
     return (
         <div>
         {token ? <>
-            <h2 className="main-header">Vendedores</h2>
+            <h2 className="main-header">Usuarios</h2>
             <h3>Registro Datos</h3>
             <Form className="create-form">
                 <Form.Field>
