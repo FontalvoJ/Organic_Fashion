@@ -18,7 +18,9 @@ function Navbar() {
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
-          <GoogleSignIn />
+          <h2 className="main-header2">Organic Fashion Company<br></br></h2>
+          <div className= 'google'><GoogleSignIn /></div>
+          
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>

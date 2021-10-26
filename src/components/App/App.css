@@ -34,7 +34,7 @@
   align-items: center;
   height: 100vh;
   background-color: #212121;
-  background-image: url(https://brazilcham.com/wp-content/uploads/2021/04/spotkanie-biznesowe.jpg);
+  background-image: url(https://images.pexels.com/photos/4397831/pexels-photo-4397831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: 110rem;
   background-position: center;
   color: whitesmoke;
@@ -46,9 +46,9 @@
   justify-content: center;
   align-items: center;
   height: auto;
-  border: 20px solid #212121;
+  border: 20px solid #060b26;
   border-radius: 1px;
-  background-color: #212121;
+  background-color: #060b26;
   color: whitesmoke;
   flex-direction: column;
   -webkit-border-radius: 1px;

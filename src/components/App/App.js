@@ -18,7 +18,6 @@ function App() {
       <Switch>
       <div className="main">
         <div className="target">
-          <h2 className="main-header">Organic Fashion Company<br></br></h2>
           <div>
             <Route exact path='/' component={LoginUser} />
             <Route exact path='/registrar-vendedor' component={Create} />

@@ -3,12 +3,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as IoIcons from 'react-icons/io';
 
 export const SidebarData = [
-  {
-    title: 'Iniciar Sesion',
-    path: '/login',
-    icon: <IoIcons.IoIosCheckmarkCircleOutline />,
-    cName: 'nav-text'
-  },
+  
   {
     title: 'Registrar Productos',
     path: '/registrar-producto',

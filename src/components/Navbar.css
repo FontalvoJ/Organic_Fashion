@@ -11,7 +11,14 @@
     font-size: 2rem;
     background: none;
   }
-  
+  .google{
+    padding-left: 780px;
+  }
+  .main-header2{
+    color: white;
+    padding-left: 100px;
+    size: 14px;
+  }
   .nav-menu {
     background-color: #060b26;
     width: 250px;
