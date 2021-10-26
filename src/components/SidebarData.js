@@ -28,12 +28,7 @@ export const SidebarData = [
     icon: <IoIcons.IoMdPeople />,
     cName: 'nav-text'
   },
-  {
-    title: 'Registrar Ventas',
-    path: '/ventas',
-    icon: <FaIcons.FaHornbill/>,
-    cName: 'nav-text'
-  },
+
   {
     title: 'Ventas',
     path: '/ventas',
