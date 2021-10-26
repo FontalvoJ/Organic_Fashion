@@ -1,5 +1,5 @@
 import { Button } from 'semantic-ui-react'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Table } from 'semantic-ui-react'
 
 export default function Update() {

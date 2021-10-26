@@ -23,7 +23,7 @@ const Create = () => (
 
 export default Create;*/
 
-export default function Create() {
+export default function CreateUser() {
 
     const [Nombre, setName] = useState('');
     const [Email, setEmail] = useState('');
@@ -76,6 +76,7 @@ export default function Create() {
         }
     }
 
+    const idd ='user';
     const token = getToken();
     return (
         <div>
@@ -85,30 +86,27 @@ export default function Create() {
             <Form className="create-form">
                 <Form.Field>
                     <label>Nombre</label>
-                    <input placeholder='Nombre' onChange={(e) => setFirstName(e.target.value)} value={Nombre}/>
+                    <input placeholder='Nombre' onChange={(e) => setName(e.target.value)} value={Nombre}/>
                 </Form.Field>
                 <Form.Field>
-                    <label>Cedula</label>
-                    <input placeholder='Cedula' onChange={(e) => setId(e.target.value)} value={Cedula}/>
+                    <label>Email</label>
+                    <input placeholder='Email' onChange={(e) => setEmail(e.target.value)} value={Email}/>
                 </Form.Field>
+                { isForUpdate ? null :
                 <Form.Field>
-                    <label>Celular</label>
-                    <input placeholder='Celular' onChange={(e) => setCellphone(e.target.value)} value={Celular}/>
-                </Form.Field>
+                    <label>Password</label>
+                    <input placeholder='Password' onChange={(e) => setPassword(e.target.value)} value={Password}/>
+                </Form.Field>}
                 <Form.Field>
-                    <label>Edad</label>
-                    <input placeholder='Edad' onChange={(e) => setAge(e.target.value)} value={Edad}/>
-                </Form.Field>
-                <Form.Field>
-                    <label>E-mail</label>
-                    <input placeholder='E-mail' onChange={(e) => setEmail(e.target.value)} value={Email}/>
+                    <label>Rol</label>
+                    <input placeholder='Rol' onChange={(e) => setRole(e.target.value)} value={Role}/>
                 </Form.Field>
                 <Link to='/update'>
                     <Button color={ isForUpdate ? "blue" : "green"} onClick={postData} type='submit'>
                         { isForUpdate ? 'Actualizar' : 'Registrar'}
                     </Button>
                 </Link>
-                <Link to='/vendedores'>
+                <Link to='/usuarios'>
                     <Button color="red">Cancelar</Button>
                 </Link>
             </Form>
