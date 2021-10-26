@@ -29,7 +29,7 @@ export default function ReadUser() {
                     <Table.HeaderCell className="td1">Nombre Completo</Table.HeaderCell>
                     <Table.HeaderCell className="td">Email</Table.HeaderCell>
                     <Table.HeaderCell className="td">Rol</Table.HeaderCell>
-                    <Table.HeaderCell className="td">WithGoogle</Table.HeaderCell>
+                    <Table.HeaderCell className="td">Login Google</Table.HeaderCell>
                     <Table.HeaderCell className="td">Actualizar Datos</Table.HeaderCell>
                     <Table.HeaderCell className="td">Eliminar Perfil</Table.HeaderCell>
                 </Table.Row>

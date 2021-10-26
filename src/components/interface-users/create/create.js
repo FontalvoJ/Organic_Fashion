@@ -61,7 +61,6 @@ export default function CreateUser() {
         email: Email,
         password: Password,
         role: Role,
-        withGoogle: WithGoogle,
         };
         if(isForUpdate){
                 const UpdatedUser = await httpPatch(`${process.env.REACT_APP_BACKEND_URL}/users/${params.id}`,{
@@ -76,7 +75,6 @@ export default function CreateUser() {
         }
     }
 
-    const idd ='user';
     const token = getToken();
     return (
         <div>
@@ -98,7 +96,7 @@ export default function CreateUser() {
                     <input placeholder='Password' onChange={(e) => setPassword(e.target.value)} value={Password}/>
                 </Form.Field>}
                 <Form.Field>
-                    <label>Rol</label>
+                    <label>Rol ADMIN o VENDEDOR</label>
                     <input placeholder='Rol' onChange={(e) => setRole(e.target.value)} value={Role}/>
                 </Form.Field>
                 <Link to='/update'>
