@@ -21,7 +21,7 @@ export default function ReadUser() {
     return (
         <div>
         {token ? <>
-        <h2 className="App">Vendedores</h2>
+        <h2 className="App"> Usuarios </h2>
         <Table inverted>
             <Table.Header className="App">
                 <Table.Row className="table">
